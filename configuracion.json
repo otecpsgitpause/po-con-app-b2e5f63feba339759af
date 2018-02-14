@@ -3,7 +3,7 @@
         {
             "sistema":"plataforma online",
             "key":"ffgh/23r+7632gf",
-            "origin":"https://localhost:4201"
+            "origin":"http://localhost:4201"
         }
     ]
 }
