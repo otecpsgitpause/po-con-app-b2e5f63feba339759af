@@ -12,6 +12,7 @@ var conector = {
     authenticate: function (req, res) {
         let header = req.headers;
         let body = req.body;
+
         //console.log({ kData: body.k });
         cryptoUtil.cryptoMethod.decode(body.k).then(dec => {
             console.log({decData:dec});
@@ -23,6 +24,7 @@ var conector = {
             if (sysIndex != -1) {
 
                 if (conf.apps[sysIndex].origin == header.origin) {
+                    
                     console.log('origen pass');
                     //solicitando token
                     cryptoUtil.cryptoMethod.encode(JSON.stringify({keyApp:'34532345456dfdfghsadsfdfs'})).then(enc=>{
