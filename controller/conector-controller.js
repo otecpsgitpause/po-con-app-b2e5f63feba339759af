@@ -20,10 +20,10 @@ var conector = {
             console.log({jsonData:j});
             
             
-            let sysIndex = _.findIndex(conf.apps, function (o) { return o.key == j.k; })
-            if (sysIndex != -1) {
+            let sysIndex = _.findIndex(conf.apps, function (o) { return o.origin == header.origin; })
+            if (sysIndex > -1) {
 
-                if (conf.apps[sysIndex].origin == header.origin) {
+                if (sysIndex > -1) {
                     
                     console.log('origen pass');
                     //solicitando token
